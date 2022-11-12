@@ -1,13 +1,15 @@
-#ifndef SMTPCLIENTBASE_H
-#define SMTPCLIENTBASE_H
+#ifndef SMTPCLIENT_C_SMTPCLIENTBASE_H
+#define SMTPCLIENT_C_SMTPCLIENTBASE_H
 
+#include "smtpclient/c/attachment.h"
+#include "smtpclient/c/credential.h"
+#include "smtpclient/c/htmlmessage.h"
+#include "smtpclient/c/messageaddress.h"
+#include "smtpclient/c/plaintextmessage.h"
+#include "smtpclient/c/serverauthoptions.h"
 #include <string>
+#include <tuple>
 #include <vector>
-#include "attachment.h"
-#include "credential.h"
-#include "message.h"
-#include "messageaddress.h"
-#include "serverauthoptions.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS

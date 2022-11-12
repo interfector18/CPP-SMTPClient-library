@@ -1,4 +1,4 @@
-#include "htmlmessage.h"
+#include "smtpclient/c/htmlmessage.h"
 
 using namespace jed_utils;
 

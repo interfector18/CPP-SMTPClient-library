@@ -1,5 +1,5 @@
-#ifndef STRINGUTILS_H
-#define STRINGUTILS_H
+#ifndef SMTPCLIENT_C_STRINGUTILS_H
+#define SMTPCLIENT_C_STRINGUTILS_H
 
 #include <string>
 
@@ -51,4 +51,4 @@ class STRINGUTILS_API StringUtils {
 }  // namespace jed_utils
 
 
-#endif  // STRINGUTILS_H
+#endif  // SMTPCLIENT_C_STRINGUTILS_H

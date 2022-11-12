@@ -1,17 +1,18 @@
-#include "attachment.h"
+#include "smtpclient/c/attachment.h"
+#include "smtpclient/c/stringutils.h"
+#include <algorithm>
 #include <cstdint>
 #include <ios>
 #include <iostream>
 #include <limits>
 #include <string>
-#include "stringutils.h"
 
 using namespace jed_utils;
 
 Attachment::Attachment(const char *pFilename, const char *pName, const char *pContentId)
     : mName(nullptr), mFilename(nullptr), mContentId(nullptr) {
     size_t pFileNameLength = strlen(pFilename);
-    if (pFileNameLength == 0 || StringUtils::trim(std::string(pFilename)).length() == 0) {
+    if (pFileNameLength == 0 || StringUtils::trim(std::string(pFilename)).empty()) {
         throw std::invalid_argument("filename");
     }
 

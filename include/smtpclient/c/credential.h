@@ -1,5 +1,5 @@
-#ifndef CREDENTIAL_H
-#define CREDENTIAL_H
+#ifndef SMTPCLIENT_C_CREDENTIAL_H
+#define SMTPCLIENT_C_CREDENTIAL_H
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS
@@ -101,4 +101,4 @@ class CREDENTIAL_API Credential {
 };
 }  // namespace jed_utils
 
-#endif  // CREDENTIAL_H
+#endif  // SMTPCLIENT_C_CREDENTIAL_H

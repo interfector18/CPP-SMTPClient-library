@@ -1,4 +1,4 @@
-#include "../../src/cpp/htmlmessage.hpp"
+#include "smtpclient/htmlmessage.hpp"
 #include <gtest/gtest.h>
 
 using namespace jed_utils::cpp;

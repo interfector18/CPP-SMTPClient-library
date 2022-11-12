@@ -1,29 +1,26 @@
-#ifndef CPPMESSAGEADDRESS_H
-#define CPPMESSAGEADDRESS_H
+#ifndef SMTPCLIENT_C_MESSAGEADDRESS_H
+#define SMTPCLIENT_C_MESSAGEADDRESS_H
 
 #include <cstring>
 #include <sstream>
 #include <string>
-#include <vector>
-#include "../messageaddress.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS
-        #define CPP_MESSAGEADDRESS_API __declspec(dllexport)
+        #define MESSAGEADDRESS_API __declspec(dllexport)
     #else
-        #define CPP_MESSAGEADDRESS_API __declspec(dllimport)
+        #define MESSAGEADDRESS_API __declspec(dllimport)
     #endif
 #else
-    #define CPP_MESSAGEADDRESS_API
+    #define MESSAGEADDRESS_API
 #endif
 
 namespace jed_utils {
-namespace cpp {
 /** @brief The MessageAddress class represents a sender or a recipient address containing
  *  the email address and the display name.
  *  Example : joeblow@domainexample.com Joe Blow
  */
-class CPP_MESSAGEADDRESS_API MessageAddress : private jed_utils::MessageAddress {
+class MESSAGEADDRESS_API MessageAddress {
  public:
     /**
      *  @brief  Construct a new MessageAddress.
@@ -32,23 +29,22 @@ class CPP_MESSAGEADDRESS_API MessageAddress : private jed_utils::MessageAddress 
      *  @param pDisplayName The display name of the address that will appear in
      *  the message. Example : Joe Blow
      */
-    explicit MessageAddress(const std::string &pEmailAddress,
-                            const std::string &pDisplayName = "");
+    explicit MessageAddress(const char *pEmailAddress, const char *pDisplayName = "");
 
     /** Destructor of the MessageAddress */
-    ~MessageAddress() override = default;
+    virtual ~MessageAddress();
 
     /** MessageAddress copy constructor. */
-    MessageAddress(const MessageAddress& other) = default;
+    MessageAddress(const MessageAddress& other);
 
     /** MessageAddress copy assignment operator. */
-    MessageAddress& operator=(const MessageAddress& other) = default;
+    MessageAddress& operator=(const MessageAddress& other);
 
     /** MessageAddress move constructor. */
-    MessageAddress(MessageAddress&& other) noexcept = default;
+    MessageAddress(MessageAddress&& other) noexcept;
 
     /** MessageAddress move assignment operator. */
-    MessageAddress& operator=(MessageAddress&& other) noexcept = default;
+    MessageAddress& operator=(MessageAddress&& other) noexcept;
 
     /** MessageAddress equality operator. */
     bool operator==(const MessageAddress &pMsgComp) const;
@@ -57,20 +53,18 @@ class CPP_MESSAGEADDRESS_API MessageAddress : private jed_utils::MessageAddress 
     explicit operator std::string() const;
 
     /** Return the email address. */
-    std::string getEmailAddress() const;
+    const char *getEmailAddress() const;
 
     /** Return the display name. */
-    std::string getDisplayName() const;
+    const char *getDisplayName() const;
 
-    jed_utils::MessageAddress toStdMessageAddress() const;
-
-    friend class Message;
+    friend class message;
 
  private:
-    MessageAddress();
+    char *mEmailAddress = nullptr;
+    char *mDisplayName = nullptr;
+    bool isEmailAddressValid(const std::string &pEmailAddress) const;
 };
-}  // namespace cpp
 }  // namespace jed_utils
 
 #endif
-

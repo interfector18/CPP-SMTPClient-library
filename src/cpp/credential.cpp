@@ -1,4 +1,4 @@
-#include "credential.hpp"
+#include "smtpclient/credential.hpp"
 
 using namespace jed_utils::cpp;
 

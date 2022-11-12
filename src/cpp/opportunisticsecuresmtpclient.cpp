@@ -1,4 +1,4 @@
-#include "opportunisticsecuresmtpclient.hpp"
+#include "smtpclient/opportunisticsecuresmtpclient.hpp"
 #include <string>
 
 using namespace jed_utils::cpp;

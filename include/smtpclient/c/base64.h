@@ -1,5 +1,5 @@
-#ifndef BASE64UTILS_H
-#define BASE64UTILS_H
+#ifndef SMTPCLIENT_C_BASE64_H
+#define SMTPCLIENT_C_BASE64_H
 
 #include <string>
 

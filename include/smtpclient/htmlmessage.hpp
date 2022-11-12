@@ -1,30 +1,30 @@
-#ifndef CPPPLAINTEXTMESSAGE_H
-#define CPPPLAINTEXTMESSAGE_H
+#ifndef SMTPCLIENT_HTMLMESSAGE_HPP
+#define SMTPCLIENT_HTMLMESSAGE_HPP
 
+#include "smtpclient/attachment.hpp"
+#include "smtpclient/c/htmlmessage.h"
+#include "smtpclient/message.hpp"
+#include "smtpclient/messageaddress.hpp"
 #include <string>
 #include <vector>
-#include "attachment.hpp"
-#include "message.hpp"
-#include "messageaddress.hpp"
-#include "../plaintextmessage.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS
-        #define CPP_PLAINTEXTMESSAGE_API __declspec(dllexport)
+        #define CPP_HTMLMESSAGE_API __declspec(dllexport)
     #else
-        #define CPP_PLAINTEXTMESSAGE_API __declspec(dllimport)
+        #define CPP_HTMLMESSAGE_API __declspec(dllimport)
     #endif
 #else
-    #define CPP_PLAINTEXTMESSAGE_API
+    #define CPP_HTMLMESSAGE_API
 #endif
 
 namespace jed_utils {
 namespace cpp {
 /** @brief The Message class represents the base class of an email message. */
-class CPP_PLAINTEXTMESSAGE_API PlaintextMessage : public Message {
+class CPP_HTMLMESSAGE_API HTMLMessage : public Message {
  public:
     /**
-     *  @brief  Construct a new single recipient PlaintextMessage class.
+     *  @brief  Construct a new single recipient HTMLMessage class.
      *  @param pFrom The sender email address of the message.
      *  @param pTo The recipient email addresses of the message.
      *  @param pSubject The subject of the message.
@@ -33,7 +33,7 @@ class CPP_PLAINTEXTMESSAGE_API PlaintextMessage : public Message {
      *  @param pBcc The blind carbon-copy recipient email addresses.
      *  @param pAttachments The attachments of the message
      */
-    PlaintextMessage(const MessageAddress &pFrom,
+    HTMLMessage(const MessageAddress &pFrom,
             const std::vector<MessageAddress> &pTo,
             const std::string &pSubject,
             const std::string &pBody,
@@ -42,13 +42,12 @@ class CPP_PLAINTEXTMESSAGE_API PlaintextMessage : public Message {
             const std::vector<Attachment> &pAttachments = {});
 
     /** The destructor of the Message */
-    virtual ~PlaintextMessage() = default;
+    virtual ~HTMLMessage() = default;
 
     /** Return the string MIME type of the message (Pure virtual function). */
     std::string getMimeType() const override;
 
-    operator jed_utils::PlaintextMessage() const;
-
+    operator jed_utils::HTMLMessage() const;
 };
 }  // namespace cpp
 }  // namespace jed_utils

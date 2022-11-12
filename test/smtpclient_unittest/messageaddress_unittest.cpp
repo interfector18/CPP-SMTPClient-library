@@ -1,5 +1,5 @@
-#include "../../src/messageaddress.h"
-#include "../../src/cpp/messageaddress.hpp"
+#include "smtpclient/c/messageaddress.h"
+#include "smtpclient/messageaddress.hpp"
 #include <gtest/gtest.h>
 #include <stdexcept>
 

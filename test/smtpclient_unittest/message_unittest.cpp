@@ -1,4 +1,4 @@
-#include "../../src/message.h"
+#include "smtpclient/c/message.h"
 #include <gtest/gtest.h>
 
 using namespace jed_utils;

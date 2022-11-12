@@ -1,5 +1,5 @@
-#include "smtpclient.h"
-#include "smtpserverstatuscodes.h"
+#include "smtpclient/c/smtpclient.h"
+#include "smtpclient/c/smtpserverstatuscodes.h"
 #ifdef _WIN32
     #include <WinSock2.h>
     #include <ws2tcpip.h>
@@ -10,8 +10,8 @@
     #include <unistd.h>
 #endif
 #include <sstream>
-#include <vector>
 #include <utility>
+#include <vector>
 
 using namespace jed_utils;
 

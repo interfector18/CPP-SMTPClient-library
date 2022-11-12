@@ -1,10 +1,10 @@
-#ifndef MESSAGE_H
-#define MESSAGE_H
+#ifndef SMTPCLIENT_C_MESSAGE_H
+#define SMTPCLIENT_C_MESSAGE_H
 
+#include "smtpclient/c/attachment.h"
+#include "smtpclient/c/messageaddress.h"
 #include <cstring>
 #include <vector>
-#include "attachment.h"
-#include "messageaddress.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS

@@ -1,4 +1,4 @@
-#include "../../src/cpp/plaintextmessage.hpp"
+#include "smtpclient/plaintextmessage.hpp"
 #include <gtest/gtest.h>
 
 using namespace jed_utils::cpp;

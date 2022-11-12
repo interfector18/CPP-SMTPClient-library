@@ -1,5 +1,5 @@
-#include "../../src/smtpclient.h"
-#include "../../src/cpp/smtpclient.hpp"
+#include "smtpclient/c/smtpclient.h"
+#include "smtpclient/smtpclient.hpp"
 #include <gtest/gtest.h>
 
 using namespace jed_utils;

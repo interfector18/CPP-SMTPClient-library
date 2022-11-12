@@ -25,7 +25,7 @@
 
 */
 
-#include "base64.h"
+#include "smtpclient/c/base64.h"
 #include <iostream>
 
 using namespace jed_utils;

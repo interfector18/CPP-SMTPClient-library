@@ -1,4 +1,4 @@
-#include "stringutils.h"
+#include "smtpclient/c/stringutils.h"
 #include <algorithm>
 #include <cctype>
 #include <locale>

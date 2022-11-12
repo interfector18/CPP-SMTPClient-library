@@ -1,7 +1,7 @@
+#include "smtpclient/c/plaintextmessage.h"
 #include <gtest/gtest.h>
 #include <stdexcept>
 #include <vector>
-#include "../../src/plaintextmessage.h"
 
 using namespace jed_utils;
 

@@ -1,7 +1,7 @@
-#ifndef IMPLICITSSLSMTPCLIENT_H
-#define IMPLICITSSLSMTPCLIENT_H
+#ifndef SMTPCLIENT_C_IMPLICITSSLSMTPCLIENT_H
+#define SMTPCLIENT_C_IMPLICITSSLSMTPCLIENT_H
 
-#include "securesmtpclientbase.h"
+#include "smtpclient/c/securesmtpclientbase.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS

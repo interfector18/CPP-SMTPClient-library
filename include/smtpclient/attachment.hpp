@@ -1,10 +1,10 @@
-#ifndef CPPATTACHMENT_H
-#define CPPATTACHMENT_H
+#ifndef SMTPCLIENT_ATTACHMENT_HPP
+#define SMTPCLIENT_ATTACHMENT_HPP
 
+#include "smtpclient/c/attachment.h"
+#include "smtpclient/c/base64.h"
 #include <fstream>
 #include <string>
-#include "../attachment.h"
-#include "../base64.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS

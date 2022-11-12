@@ -1,50 +1,50 @@
-#ifndef CPPOPPORTUNISTICSECURESMTPCLIENT_H
-#define CPPOPPORTUNISTICSECURESMTPCLIENT_H
+#ifndef CPPFORCEDSECURESMTPCLIENT_H
+#define CPPFORCEDSECURESMTPCLIENT_H
 
-#include "credential.hpp"
-#include "../opportunisticsecuresmtpclient.h"
+#include "smtpclient/credential.hpp"
+#include "smtpclient/c/forcedsecuresmtpclient.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS
-        #define CPP_OPPORTUNISTICSECURESMTPCLIENT_API __declspec(dllexport)
+        #define CPP_FORCEDSECURESMTPCLIENT_API __declspec(dllexport)
     #else
-        #define CPP_OPPORTUNISTICSECURESMTPCLIENT_API __declspec(dllimport)
+        #define CPP_FORCEDSECURESMTPCLIENT_API __declspec(dllimport)
     #endif
 #else
-    #define CPP_OPPORTUNISTICSECURESMTPCLIENT_API
+    #define CPP_FORCEDSECURESMTPCLIENT_API
 #endif
 
 namespace jed_utils {
 namespace cpp {
-/** @brief The OpportunisticSecureSMTPClient should be your default choice for
+/** @brief The ForcedSecureSMTPClient should be your default choice for
  *  communicating with modern SMTP servers. The communication is usually done
  *  via port 587.
  */
-class CPP_OPPORTUNISTICSECURESMTPCLIENT_API OpportunisticSecureSMTPClient : private jed_utils::OpportunisticSecureSMTPClient {
+class CPP_FORCEDSECURESMTPCLIENT_API ForcedSecureSMTPClient : private jed_utils::ForcedSecureSMTPClient {
  public:
     /**
-     *  @brief  Construct a new OpportunisticSecureSMTPClient.
+     *  @brief  Construct a new ForcedSecureSMTPClient.
      *  @param pServerName The name of the server.
      *  Example: smtp.domainexample.com
      *  @param pPort The server port number.
      *  Example: 25, 465, 587
      */
-    OpportunisticSecureSMTPClient(const std::string &pServerName, unsigned int pPort);
+    ForcedSecureSMTPClient(const std::string &pServerName, unsigned int pPort);
 
-    /** Destructor of the OpportunisticSecureSMTPClient. */
-    ~OpportunisticSecureSMTPClient() override = default;
+    /** Destructor of the ForcedSecureSMTPClient. */
+    ~ForcedSecureSMTPClient() override = default;
 
-    /** OpportunisticSecureSMTPClient copy constructor. */
-    OpportunisticSecureSMTPClient(const OpportunisticSecureSMTPClient& other) = default;
+    /** ForcedSecureSMTPClient copy constructor. */
+    ForcedSecureSMTPClient(const ForcedSecureSMTPClient& other) = default;
 
-    /** OpportunisticSecureSMTPClient copy assignment operator. */
-    OpportunisticSecureSMTPClient& operator=(const OpportunisticSecureSMTPClient& other) = default;
+    /** ForcedSecureSMTPClient copy assignment operator. */
+    ForcedSecureSMTPClient& operator=(const ForcedSecureSMTPClient& other) = default;
 
-    /** OpportunisticSecureSMTPClient move constructor. */
-    OpportunisticSecureSMTPClient(OpportunisticSecureSMTPClient&& other) noexcept = default;
+    /** ForcedSecureSMTPClient move constructor. */
+    ForcedSecureSMTPClient(ForcedSecureSMTPClient&& other) noexcept = default;
 
-    /** OpportunisticSecureSMTPClient move assignment operator. */
-    OpportunisticSecureSMTPClient& operator=(OpportunisticSecureSMTPClient&& other) noexcept = default;
+    /** ForcedSecureSMTPClient move assignment operator. */
+    ForcedSecureSMTPClient& operator=(ForcedSecureSMTPClient&& other) noexcept = default;
 
     /** Return the server name. */
     std::string getServerName() const;

@@ -1,5 +1,5 @@
-#include "plaintextmessage.hpp"
-#include "message.hpp"
+#include "smtpclient/plaintextmessage.hpp"
+#include "smtpclient/message.hpp"
 
 using namespace jed_utils::cpp;
 

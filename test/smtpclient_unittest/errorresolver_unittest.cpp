@@ -1,8 +1,8 @@
+#include "smtpclient/c/errorresolver.h"
+#include "smtpclient/c/smtpclienterrors.h"
+#include "smtpclient/c/socketerrors.h"
+#include "smtpclient/c/sslerrors.h"
 #include <gtest/gtest.h>
-#include "../../src/errorresolver.h"
-#include "../../src/smtpclienterrors.h"
-#include "../../src/socketerrors.h"
-#include "../../src/sslerrors.h"
 
 using namespace jed_utils;
 using namespace std::literals::string_literals;

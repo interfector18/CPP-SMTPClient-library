@@ -1,8 +1,8 @@
-#include "credential.h"
+#include "smtpclient/c/credential.h"
+#include "smtpclient/c/stringutils.h"
 #include <cstring>
 #include <stdexcept>
 #include <string>
-#include "stringutils.h"
 
 using namespace jed_utils;
 

@@ -1,4 +1,4 @@
-#include "message.hpp"
+#include "smtpclient/message.hpp"
 #include <algorithm>
 #include <stdexcept>
 #include <vector>

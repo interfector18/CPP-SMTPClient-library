@@ -1,10 +1,9 @@
-#include "forcedsecuresmtpclient.h"
+#include "smtpclient/c/forcedsecuresmtpclient.h"
+#include "smtpclient/c/smtpclienterrors.h"
+#include "smtpclient/c/smtpserverstatuscodes.h"
+#include "smtpclient/c/socketerrors.h"
+#include "smtpclient/c/sslerrors.h"
 #include <openssl/err.h>
-#include <utility>
-#include "smtpclienterrors.h"
-#include "smtpserverstatuscodes.h"
-#include "socketerrors.h"
-#include "sslerrors.h"
 
 #ifdef _WIN32
     #include <WinSock2.h>

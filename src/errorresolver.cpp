@@ -1,10 +1,8 @@
-#include "errorresolver.h"
-
-#include "base64.h"
-
-#include "smtpclienterrors.h"
-#include "socketerrors.h"
-#include "sslerrors.h"
+#include "smtpclient/c/errorresolver.h"
+#include "smtpclient/c/base64.h"
+#include "smtpclient/c/smtpclienterrors.h"
+#include "smtpclient/c/socketerrors.h"
+#include "smtpclient/c/sslerrors.h"
 #include <cstddef>
 #include <cstring>
 #include <string>

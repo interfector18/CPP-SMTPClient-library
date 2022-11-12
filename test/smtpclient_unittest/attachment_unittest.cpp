@@ -1,7 +1,7 @@
+#include "smtpclient/c/attachment.h"
+#include "smtpclient/attachment.hpp"
 #include "gtest/gtest.h"
 #include <gtest/gtest.h>
-#include "../../src/attachment.h"
-#include "../../src/cpp/attachment.hpp"
 
 using namespace jed_utils;
 

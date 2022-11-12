@@ -1,8 +1,8 @@
-#ifndef SECURESMTPCLIENTBASE_H
-#define SECURESMTPCLIENTBASE_H
+#ifndef SMTPCLIENT_C_SECURESMTPCLIENTBASE_H
+#define SMTPCLIENT_C_SECURESMTPCLIENTBASE_H
 
+#include "smtpclient/c/smtpclientbase.h"
 #include <openssl/ssl.h>
-#include "smtpclientbase.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS
@@ -30,7 +30,7 @@ class SECURESMTPCLIENTBASE_API SecureSMTPClientBase : public SMTPClientBase {
     SecureSMTPClientBase(const char *pServerName, unsigned int pPort);
 
     /** Destructor of the SecureSMTPClientBase. */
-    ~SecureSMTPClientBase();
+    ~SecureSMTPClientBase() override;
 
     /** SecureSMTPClientBase copy constructor. */
     SecureSMTPClientBase(const SecureSMTPClientBase& other);

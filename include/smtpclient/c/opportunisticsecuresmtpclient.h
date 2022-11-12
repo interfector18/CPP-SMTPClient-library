@@ -1,7 +1,7 @@
-#ifndef OPPORTUNISTICSECURESMTPCLIENT_H
-#define OPPORTUNISTICSECURESMTPCLIENT_H
+#ifndef SMTPCLIENT_C_OPPORTUNISTICSECURESMTPCLIENT_H
+#define SMTPCLIENT_C_OPPORTUNISTICSECURESMTPCLIENT_H
 
-#include "securesmtpclientbase.h"
+#include "smtpclient/c/securesmtpclientbase.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS

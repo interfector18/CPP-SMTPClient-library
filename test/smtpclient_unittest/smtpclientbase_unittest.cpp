@@ -1,13 +1,13 @@
+#include "smtpclient/c/messageaddress.h"
+#include "smtpclient/c/smtpclientbase.h"
+#include "smtpclient/c/smtpclienterrors.h"
+#include "smtpclient/c/socketerrors.h"
+#include "smtpclient/forcedsecuresmtpclient.hpp"
+#include "smtpclient/opportunisticsecuresmtpclient.hpp"
+#include "smtpclient/smtpclient.hpp"
 #include <gtest/gtest.h>
 #include <string>
 #include <vector>
-#include "../../src/messageaddress.h"
-#include "../../src/smtpclientbase.h"
-#include "../../src/cpp/forcedsecuresmtpclient.hpp"
-#include "../../src/cpp/opportunisticsecuresmtpclient.hpp"
-#include "../../src/cpp/smtpclient.hpp"
-#include "../../src/smtpclienterrors.h"
-#include "../../src/socketerrors.h"
 
 using namespace jed_utils;
 

@@ -1,4 +1,4 @@
-#include "forcedsecuresmtpclient.hpp"
+#include "smtpclient/forcedsecuresmtpclient.hpp"
 #include <string>
 
 using namespace jed_utils::cpp;

@@ -1,4 +1,4 @@
-#include "attachment.hpp"
+#include "smtpclient/attachment.hpp"
 
 using namespace jed_utils::cpp;
 

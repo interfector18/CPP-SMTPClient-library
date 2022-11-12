@@ -1,11 +1,11 @@
-#ifndef CPPMESSAGE_H
-#define CPPMESSAGE_H
+#ifndef SMTPCLIENT_MESSAGE_HPP
+#define SMTPCLIENT_MESSAGE_HPP
 
+#include "smtpclient/attachment.hpp"
+#include "smtpclient/c/message.h"
+#include "smtpclient/messageaddress.hpp"
 #include <string>
 #include <vector>
-#include "attachment.hpp"
-#include "../message.h"
-#include "messageaddress.hpp"
 
 #ifdef _WIN32
     #pragma warning(disable: 4251)

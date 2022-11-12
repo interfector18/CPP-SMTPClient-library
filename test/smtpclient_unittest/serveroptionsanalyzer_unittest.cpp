@@ -1,5 +1,5 @@
+#include "smtpclient/c/serveroptionsanalyzer.h"
 #include <gtest/gtest.h>
-#include "../../src/serveroptionsanalyzer.h"
 
 using namespace jed_utils;
 

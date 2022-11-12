@@ -1,5 +1,5 @@
-#include "../../src/credential.h"
-#include "../../src/cpp/credential.hpp"
+#include "smtpclient/c/credential.h"
+#include "smtpclient/credential.hpp"
 #include <gtest/gtest.h>
 #include <algorithm>
 #include <string>

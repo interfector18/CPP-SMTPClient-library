@@ -1,12 +1,12 @@
-#include "securesmtpclientbase.h"
+#include "smtpclient/c/serveroptionsanalyzer.h"
+#include "smtpclient/c/securesmtpclientbase.h"
+#include "smtpclient/c/smtpclienterrors.h"
+#include "smtpclient/c/socketerrors.h"
+#include "smtpclient/c/sslerrors.h"
 #include <openssl/err.h>
 #include <openssl/x509_vfy.h>
 #include <string>
 #include <utility>
-#include "serveroptionsanalyzer.h"
-#include "smtpclienterrors.h"
-#include "socketerrors.h"
-#include "sslerrors.h"
 
 #ifdef _WIN32
     #include <WinSock2.h>

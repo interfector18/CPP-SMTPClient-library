@@ -1,27 +1,27 @@
-#ifndef PLAINTEXTMESSAGE_H
-#define PLAINTEXTMESSAGE_H
+#ifndef SMTPCLIENT_C_HTMLMESSAGE_H
+#define SMTPCLIENT_C_HTMLMESSAGE_H
 
+#include "smtpclient/c/message.h"
 #include <string>
-#include "message.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS
-        #define PLAINTEXTMESSAGE_API __declspec(dllexport)
+        #define HTMLMESSAGE_API __declspec(dllexport)
     #else
-        #define PLAINTEXTMESSAGE_API __declspec(dllimport)
+        #define HTMLMESSAGE_API __declspec(dllimport)
     #endif
 #else
-    #define PLAINTEXTMESSAGE_API
+    #define HTMLMESSAGE_API
 #endif
 
 namespace jed_utils {
-/** @brief The PlaintextMessage class represents an email message in
- *  plain text format.
+/** @brief The HTMLMessage class represents an email message in
+ *  HTML format.
  */
-class PLAINTEXTMESSAGE_API PlaintextMessage : public Message {
+class HTMLMESSAGE_API HTMLMessage : public Message {
  public:
     /**
-     *  @brief  Construct a new single recipient PlaintextMessage.
+     *  @brief  Construct a new single recipient HTMLMessage.
      *  @param pFrom The sender email address of the message.
      *  @param pTo The recipient email address of the message.
      *  @param pSubject The subject of the message.
@@ -31,7 +31,7 @@ class PLAINTEXTMESSAGE_API PlaintextMessage : public Message {
      *  @param pAttachments The attachments array of the message
      *  @param pAttachmentsSize The number of attachments in the array.
      */
-    PlaintextMessage(const MessageAddress &pFrom,
+    HTMLMessage(const MessageAddress &pFrom,
             const MessageAddress &pTo,
             const char *pSubject,
             const char *pBody,
@@ -41,7 +41,7 @@ class PLAINTEXTMESSAGE_API PlaintextMessage : public Message {
             size_t pAttachmentsSize = 0);
 
     /**
-     *  @brief  Construct a new multiple recipients PlaintextMessage.
+     *  @brief  Construct a new multiple recipients HTMLMessage.
      *  @param pFrom The sender email address of the message.
      *  @param pTo The recipients email address array of the message.
      *  @param pToCount The number of recipients email address in the array
@@ -54,7 +54,7 @@ class PLAINTEXTMESSAGE_API PlaintextMessage : public Message {
      *  @param pAttachments The attachments array of the message
      *  @param pAttachmentsSize The number of attachments in the array.
      */
-    PlaintextMessage(const MessageAddress &pFrom,
+    HTMLMessage(const MessageAddress &pFrom,
             const MessageAddress pTo[],
             size_t pToCount,
             const char *pSubject,

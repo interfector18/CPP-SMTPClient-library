@@ -1,9 +1,9 @@
-#include "messageaddress.h"
+#include "smtpclient/c/messageaddress.h"
+#include "smtpclient/c/stringutils.h"
 #include <cstddef>
 #include <regex>
 #include <stdexcept>
 #include <string>
-#include "stringutils.h"
 
 using namespace jed_utils;
 
@@ -11,7 +11,7 @@ MessageAddress::MessageAddress(const char *pEmailAddress, const char *pDisplayNa
     : mEmailAddress(nullptr), mDisplayName(nullptr) {
     std::string email_address { pEmailAddress };
     // Check if the email address is not empty or white spaces
-    if (email_address.length() == 0 || StringUtils::trim(email_address).empty()) {
+    if (email_address.empty() || StringUtils::trim(email_address).empty()) {
         throw std::invalid_argument("pEmailAddress");
     }
     // Check is the email address is valid

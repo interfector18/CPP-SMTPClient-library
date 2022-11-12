@@ -1,9 +1,9 @@
-#include "htmlmessage.hpp"
+#include "smtpclient/c/messageaddress.h"
+#include "smtpclient/htmlmessage.hpp"
+#include "smtpclient/message.hpp"
 #include <algorithm>
 #include <iterator>
 #include <vector>
-#include "message.hpp"
-#include "../messageaddress.h"
 
 using namespace jed_utils::cpp;
 

@@ -1,5 +1,5 @@
-#ifndef SERVERAUTHOPTIONS_H
-#define SERVERAUTHOPTIONS_H
+#ifndef SMTPCLIENT_C_SERVERAUTHOPTIONS_H
+#define SMTPCLIENT_C_SERVERAUTHOPTIONS_H
 
 namespace jed_utils {
 struct ServerAuthOptions {

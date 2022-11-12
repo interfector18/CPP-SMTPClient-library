@@ -1,7 +1,7 @@
 #ifndef SMTPCLIENT_H
 #define SMTPCLIENT_H
 
-#include "smtpclientbase.h"
+#include "smtpclient/c/smtpclientbase.h"
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS

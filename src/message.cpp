@@ -1,4 +1,4 @@
-#include "message.h"
+#include "smtpclient/c/message.h"
 #include <cstddef>
 #include <iterator>
 #include <utility>

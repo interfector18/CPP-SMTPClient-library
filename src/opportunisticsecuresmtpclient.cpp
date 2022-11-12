@@ -1,10 +1,13 @@
-#include "opportunisticsecuresmtpclient.h"
+#include "smtpclient/c/opportunisticsecuresmtpclient.h"
+#include "smtpclient/c/smtpclienterrors.h"
+#include "smtpclient/c/smtpserverstatuscodes.h"
+#include "smtpclient/c/socketerrors.h"
+#include "smtpclient/c/sslerrors.h"
+#include "smtpclient/c/stringutils.h"
+#include <algorithm>
 #include <openssl/err.h>
 #include <string>
 #include <utility>
-#include "smtpserverstatuscodes.h"
-#include "socketerrors.h"
-#include "stringutils.h"
 
 #ifdef _WIN32
     #include <WinSock2.h>

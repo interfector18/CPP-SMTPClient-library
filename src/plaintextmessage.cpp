@@ -1,4 +1,4 @@
-#include "plaintextmessage.h"
+#include "smtpclient/c/plaintextmessage.h"
 
 using namespace jed_utils;
 

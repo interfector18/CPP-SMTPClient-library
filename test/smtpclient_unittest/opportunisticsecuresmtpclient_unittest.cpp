@@ -1,5 +1,5 @@
-#include "../../src/opportunisticsecuresmtpclient.h"
-#include "../../src/cpp/opportunisticsecuresmtpclient.hpp"
+#include "smtpclient/c/opportunisticsecuresmtpclient.h"
+#include "smtpclient/opportunisticsecuresmtpclient.hpp"
 #include <gtest/gtest.h>
 
 using namespace jed_utils;

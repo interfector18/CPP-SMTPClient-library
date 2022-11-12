@@ -1,4 +1,4 @@
-#include "smtpclient.hpp"
+#include "smtpclient/smtpclient.hpp"
 #include <string>
 
 using namespace jed_utils::cpp;

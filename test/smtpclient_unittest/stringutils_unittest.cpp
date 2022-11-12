@@ -1,5 +1,5 @@
+#include "smtpclient/c/stringutils.h"
 #include <gtest/gtest.h>
-#include "../../src/stringutils.h"
 
 using namespace jed_utils;
 

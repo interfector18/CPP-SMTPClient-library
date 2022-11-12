@@ -1,5 +1,5 @@
-#ifndef CPPCREDENTIAL_H
-#define CPPCREDENTIAL_H
+#ifndef SMTPCLIENT_CREDENTIAL_HPP
+#define SMTPCLIENT_CREDENTIAL_HPP
 
 #ifdef _WIN32
     #ifdef SMTPCLIENT_EXPORTS
@@ -11,8 +11,8 @@
     #define CPP_CREDENTIAL_API
 #endif
 
+#include "smtpclient/c/credential.h"
 #include <string>
-#include "../credential.h"
 
 namespace jed_utils {
 namespace cpp {

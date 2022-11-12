@@ -256,6 +256,7 @@ if (BUILD_TESTING)
         ${TEST_SRC_PATH}/errorresolver_unittest.cpp)
 
     target_link_libraries(${PROJECT_UNITTEST_NAME} ${PROJECT_NAME} gtest gtest_main ${PTHREAD})
+    target_include_directories(${PROJECT_UNITTEST_NAME} PUBLIC include)
     gtest_discover_tests(${PROJECT_UNITTEST_NAME})
 endif()
 
@@ -263,6 +264,7 @@ install (TARGETS ${PROJECT_NAME} DESTINATION lib)
 install(DIRECTORY src/ DESTINATION include/smtpclient
     FILES_MATCHING PATTERN "*.h")
 
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 # Uninstall target
 CONFIGURE_FILE(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/CMakeUninstall.cmake.in"
